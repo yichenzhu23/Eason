@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .women {
+            width: 100px;
+            height: 100px;
+            fill: red;
+            transition: all 2s;
+            rx: 15px;
+        }
+        .women:hover {
+            width: 740px;
+            height: 100px;
+        }
+        div {
+            margin: 30px;
+            font-family: Palatino;
+            border: solid 2px;
+            border-radius: 15px;
+            padding: 20px;
+        }
+        .green-rect, .yellow-rect {
+            width: 100px;
+            height: 100px;
+            rx: 15px;
+            transition: all 2s;
+            position: relative;
+        }
+        .green-rect:hover {
+            width: 690px;
+            height: 100px;
+            
+        }
+        .yellow-rect:hover {
+            width: 290px;
+            height: 100px;
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Women and Children First?</h1>
+        <p>This is the result of our Titanic analysis</p>
+        <img src="titanic.jpg" width="500px">
+        <br>
+        <h2>Study Conclusion</h2>
+        <svg width="800" height="500">
+            <rect class="women"></rect>
+            <text x="25" y="25" fill="white">Women</text>
+            <text x="650" y="40" font-size="40" fill="white">74%</text>
+            <rect y="125" width="590" height="100" fill="green" class="green-rect"></rect>
+            <rect y="250" width="190" height="100" fill="yellow" class="yellow-rect"></rect>
+        </svg>
+    </div>
+</body>
+</html>
