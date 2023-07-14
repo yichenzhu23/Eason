@@ -1,19 +1,168 @@
+<!DOCTYPE html>
 <html>
+<head>
+    <style>
+        body {
+            background-image: url("titanic2.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-    <h1>Women and Children First?</h1>
-    <p>This is the result of our Titanic analysis</p>
-    <img src="titanic.jpg" width = 500px>
-    <br>
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
 
+        p {
+            text-align: justify;
+            color: #666;
+        }
 
-    
-    <h2>Study conclusion</h2>
-    <svg width="800" height="500">
-        <rect width="740" height="100" fill="#ff0303"></rect>
-        <text x="25" y="25" fill="white">Women</text>
-        <rect y="125 "width="590" height="100" fill="green"></rect>
-        <rect y="250" width="190" height="100" fill="yellow"></rect>
-    </svg>
+        .titanic-image {
+            display: block;
+            margin: 30px auto;
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
+        .box-container {
+            margin-top: 30px;
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box {
+            position: relative;
+            height: 100px;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: width 2s;
+        }
+
+        .box:hover {
+            width: auto;
+        }
+
+        .box-label {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .category-label {
+            margin-right: 10px;
+        }
+
+        .percentage-label {
+            font-size: 20px;
+        }
+
+        .women-box {
+            background-color: #d85a5a;
+            width: 10%;
+        }
+
+        .children-box {
+            background-color: #77b35a;
+            width: 10%;
+        }
+
+        .men-box {
+            background-color: #ffcc42;
+            width: 10%;
+        }
+
+        @keyframes expandWomen {
+            from {
+                width: 10%;
+            }
+            to {
+                width: 74.2%;
+            }
+        }
+
+        @keyframes expandChildren {
+            from {
+                width: 10%;
+            }
+            to {
+                width: 59%;
+            }
+        }
+
+        @keyframes expandMen {
+            from {
+                width: 10%;
+            }
+            to {
+                width: 18.8%;
+            }
+        }
+
+        .women-box:hover {
+            animation: expandWomen 2s forwards;
+        }
+
+        .children-box:hover {
+            animation: expandChildren 2s forwards;
+        }
+
+        .men-box:hover {
+            animation: expandMen 2s forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Women and Children First?</h1>
+        <p>This is the result of our Titanic analysis.</p>
+        <img src="titanic.jpg" class="titanic-image">
+        <h2>Study Conclusion</h2>
+        <div class="box-container">
+            <div class="box women-box">
+                <span class="box-label">
+                    <span class="category-label">Women</span>
+                    <span class="percentage-label">74.2%</span>
+                </span>
+            </div>
+        </div>
+        <div class="box-container">
+            <div class="box children-box">
+                <span class="box-label">
+                    <span class="category-label">Children</span>
+                    <span class="percentage-label">59%</span>
+                </span>
+            </div>
+        </div>
+        <div class="box-container">
+            <div class="box men-box">
+                <span class="box-label">
+                    <span class="category-label">Men</span>
+                    <span class="percentage-label">18.8%</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
